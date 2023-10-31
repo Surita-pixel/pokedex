@@ -8,7 +8,7 @@
             <img class="w-16 h-16 mr-2"
                 :src="`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`"
                 :alt="`${name}`" style="height: 100px; width: 100px;" />
-            <p class="p-6"> {{ name.charAt(0).toUpperCase() + name.slice(1)}} {{ id }}</p>
+            <p class="p-6"> {{ id }} {{ name.charAt(0).toUpperCase() + name.slice(1)}}</p>
         </div>
     </div>
 </template>
