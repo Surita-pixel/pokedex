@@ -30,9 +30,9 @@ export default {
   },
   methods: {
     loadMoreData() {
-      getAllPokemonData(this.nextUrl)
+      getAllPokemonData(this.nextUrl, this.info)
         .then(({ alldata, next }) => {
-          this.info = [...this.info, ...alldata];
+          this.info = alldata;
           this.nextUrl = next;
         })
         .catch(error => {

@@ -11,8 +11,10 @@ import {RouterLink} from 'vue-router';
     <div id="nav">
         <router-link to="/">Home</router-link> 
     </div>
+    <Suspense>
     <router-view />
-    <HomePage />
+  </Suspense>
+      
   </div>
 
 </template>

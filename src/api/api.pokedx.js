@@ -6,9 +6,9 @@ export async function getAllPokemonData(url, alldata = []){
     const response = await axios.get(url)
     const {results, next} = response.data
     if(results){
-      alldata = alldata.concat(results)
+      alldata = [...alldata, ...results]
       
-        return {alldata:alldata, next:next};
+      return {alldata, next};
       
     }
   } catch (error) {
