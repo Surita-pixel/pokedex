@@ -2,8 +2,8 @@
   <div class="pokemons grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 "
     ref="pokemonList">
     <Suspense>
-      <router-link to="`/detail/${{pokemon.name}}`">
-        <PokemonCard v-for="pokemon in info" :key="pokemon.name" :name="pokemon.name" :url="pokemon.url" />
+      <router-link   v-for="pokemon in info" :key="pokemon.name"  :to="`/detail/${pokemon.name}`">
+        <PokemonCard :name="pokemon.name" :url="pokemon.url"/>
 
       </router-link>
 
