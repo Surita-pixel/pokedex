@@ -1,20 +1,17 @@
 <script setup>
-import HomePage from './pages/HomePage.vue'
-import {RouterLink} from 'vue-router';
+import { RouterLink } from 'vue-router';
 
 </script>
 
 <template>
-  <div>
-
-    <p class="font-Pixel text-3xl w-full h-full">Pokemon</p>
+  <div class=" h-screen p-5">
+    <p class="font-Pixel text-3xl">Pokemon</p>
     <div id="nav">
-        <router-link to="/">Home</router-link> 
+      <router-link to="/">Home</router-link>
     </div>
     <Suspense>
-    <router-view />
-  </Suspense>
-      
+      <router-view />
+    </Suspense>
   </div>
-
 </template>
+

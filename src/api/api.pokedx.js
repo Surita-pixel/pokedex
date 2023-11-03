@@ -22,3 +22,17 @@ export async function type(url){
   const tipo = response.data.types[0].type.name
   return tipo
 }
+
+export async function getPokemonDetail(name){
+  
+  try{
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`).then(
+      (r)=>{
+        return r.json()
+      }
+    ).then(
+      (r)=>r
+    )
+    return response
+  }catch (e){}
+}

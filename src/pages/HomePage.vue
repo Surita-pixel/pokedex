@@ -1,15 +1,13 @@
 <template>
-  <div class="pokemons grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 "
-    ref="pokemonList">
+  <div class="pokemons grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 justify-center" ref="pokemonList">
     <Suspense>
-      <router-link   v-for="pokemon in info" :key="pokemon.name"  :to="`/detail/${pokemon.name}`">
+      <router-link v-for="pokemon in info" :key="pokemon.name" :to="`/pokemon/${pokemon.name}`">
         <PokemonCard :name="pokemon.name" :url="pokemon.url"/>
-
       </router-link>
-
     </Suspense>
   </div>
 </template>
+
   
  
 <script>

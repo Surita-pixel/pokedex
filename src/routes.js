@@ -9,10 +9,11 @@ const routes =[
         component:HomePage
     },
     {
-        path:"/pokemon/:id",
-        name:"detail",
-        component:PokemonDetail
-    }
+        path: "/pokemon/:name", // Utiliza :name como parámetro dinámico
+        name: "detail",
+        component: PokemonDetail,
+        props: true, // Permite pasar props a la ruta
+      },
 ]
 
 const router = createRouter({
